@@ -1,0 +1,6 @@
+2026-03-31 15:43:07,261 [INFO] Run started | run_id=20260331_154307 | workers=26
+2026-03-31 15:44:21,551 [INFO] eGeMAPSv02 done | 0.0 min | 1266 segments
+2026-03-31 15:44:25,280 [INFO] Feature CSV saved | shape=(10, 452) | path=outputs/features/full_scale_features.csv
+2026-03-31 15:44:26,762 [INFO] Z-scored CSV saved | outputs/features/full_scale_features_zscored.csv
+2026-03-31 15:44:27,945 [INFO] Failed to extract font properties from /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf: Can not load face (unknown file format; error code 0x2)
+2026-03-31 15:44:27,993 [INFO] generated new fontManager

@@ -1,0 +1,7 @@
+2026-03-27 16:16:17,252 [INFO] Run started | run_id=20260327_161617 | workers=26
+2026-03-27 16:16:35,976 [INFO] Run started | run_id=20260327_161635 | workers=26
+2026-03-27 16:34:25,474 [INFO] eGeMAPSv02 done | 0.5 min | 1266 segments
+2026-03-27 16:38:15,567 [INFO] Feature CSV saved | shape=(10, 452) | path=outputs/features/full_scale_features.csv
+2026-03-27 16:38:16,545 [INFO] Z-scored CSV saved | outputs/features/full_scale_features_zscored.csv
+2026-03-27 16:38:18,419 [INFO] Failed to extract font properties from /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf: In FT2Font: Could not set the fontsize (invalid pixel size; error code 0x17)
+2026-03-27 16:38:18,449 [INFO] generated new fontManager

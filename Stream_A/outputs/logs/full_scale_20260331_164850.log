@@ -1,0 +1,4 @@
+2026-03-31 16:48:50,847 [INFO] Run started | run_id=20260331_164850 | workers=26
+2026-03-31 16:48:57,802 [INFO] eGeMAPSv02 done | 0.0 min | 29460 segments
+2026-03-31 16:49:04,772 [INFO] Feature CSV saved | shape=(189, 452) | path=outputs/features/full_scale_features.csv
+2026-03-31 16:49:06,705 [INFO] Z-scored CSV saved | outputs/features/full_scale_features_zscored.csv
