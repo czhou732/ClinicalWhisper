@@ -30,11 +30,3 @@ NSG_Dopaminergic_Voice/
 2. The notebook auto-installs dependencies and runs on `Data_Dummy/`
 3. Results → `Results/stream_a_features.csv`
 
-## Team
-
-| Role | Person | Stream |
-|------|--------|--------|
-| PI & Lead Author | Peter Zhou | Architecture, Stats, Manuscript |
-| Stream A Lead | Lily Wu | DAIC-WOZ, Whisper, OpenSMILE |
-| Stream B Lead | Dora Xiang | ds000030, fMRIPrep, Nilearn |
-| Grants & Ops | Candidate C (TBD) | OSF, Manuscript, Lit Search |
