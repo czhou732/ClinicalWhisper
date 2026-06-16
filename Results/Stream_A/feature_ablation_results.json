@@ -1,0 +1,568 @@
+{
+  "timestamp": "2026-05-07T09:17:47.331270",
+  "analysis": "Feature Ablation (OSF 5.5.1)",
+  "n_subjects": 142,
+  "domain_ablation": {
+    "full_eGeMAPSv02": {
+      "n_features": 447,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.5584,
+          "per_fold": [
+            0.6623,
+            0.7208,
+            0.5,
+            0.4242,
+            0.4848
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.6303,
+          "per_fold": [
+            0.6623,
+            0.724,
+            0.5341,
+            0.6326,
+            0.5985
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.6212,
+          "per_fold": [
+            0.6364,
+            0.6818,
+            0.4242,
+            0.6591,
+            0.7045
+          ]
+        }
+      },
+      "best_classifier": "RandomForest",
+      "best_auc": 0.6303
+    },
+    "full_combined": {
+      "n_features": 521,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.5911,
+          "per_fold": [
+            0.6169,
+            0.7857,
+            0.553,
+            0.447,
+            0.553
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.6329,
+          "per_fold": [
+            0.6364,
+            0.6948,
+            0.5227,
+            0.6667,
+            0.6439
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.6485,
+          "per_fold": [
+            0.5909,
+            0.6818,
+            0.4545,
+            0.8182,
+            0.697
+          ]
+        }
+      },
+      "best_classifier": "GradientBoostedTrees",
+      "best_auc": 0.6485
+    },
+    "full_rqa_only": {
+      "n_features": 74,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.5835,
+          "per_fold": [
+            0.5909,
+            0.5844,
+            0.5909,
+            0.5455,
+            0.6061
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.4792,
+          "per_fold": [
+            0.4221,
+            0.5649,
+            0.3333,
+            0.5341,
+            0.5417
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.5712,
+          "per_fold": [
+            0.4805,
+            0.7013,
+            0.4015,
+            0.8333,
+            0.4394
+          ]
+        }
+      },
+      "best_classifier": "LogisticRegression",
+      "best_auc": 0.5835
+    },
+    "domain_prosodic": {
+      "n_features": 200,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.5758,
+          "per_fold": [
+            0.7078,
+            0.7013,
+            0.4545,
+            0.4848,
+            0.5303
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.6103,
+          "per_fold": [
+            0.6006,
+            0.8182,
+            0.3485,
+            0.6402,
+            0.6439
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.6004,
+          "per_fold": [
+            0.539,
+            0.8117,
+            0.4318,
+            0.6818,
+            0.5379
+          ]
+        }
+      },
+      "best_classifier": "RandomForest",
+      "best_auc": 0.6103
+    },
+    "domain_spectral": {
+      "n_features": 235,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.4881,
+          "per_fold": [
+            0.5844,
+            0.5909,
+            0.3864,
+            0.4242,
+            0.4545
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.6194,
+          "per_fold": [
+            0.6558,
+            0.6039,
+            0.5833,
+            0.6136,
+            0.6402
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.5924,
+          "per_fold": [
+            0.5974,
+            0.5844,
+            0.5758,
+            0.5227,
+            0.6818
+          ]
+        }
+      },
+      "best_classifier": "RandomForest",
+      "best_auc": 0.6194
+    },
+    "domain_other": {
+      "n_features": 6,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.6325,
+          "per_fold": [
+            0.6104,
+            0.6429,
+            0.553,
+            0.5682,
+            0.7879
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.45,
+          "per_fold": [
+            0.4221,
+            0.5325,
+            0.3333,
+            0.5909,
+            0.3712
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.4777,
+          "per_fold": [
+            0.3831,
+            0.4675,
+            0.4242,
+            0.5985,
+            0.5152
+          ]
+        }
+      },
+      "best_classifier": "LogisticRegression",
+      "best_auc": 0.6325
+    },
+    "domain_temporal": {
+      "n_features": 6,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.4937,
+          "per_fold": [
+            0.3312,
+            0.7208,
+            0.2803,
+            0.6364,
+            0.5
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.3444,
+          "per_fold": [
+            0.3052,
+            0.2955,
+            0.2652,
+            0.3333,
+            0.5227
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.4032,
+          "per_fold": [
+            0.3117,
+            0.4545,
+            0.3485,
+            0.3561,
+            0.5455
+          ]
+        }
+      },
+      "best_classifier": "LogisticRegression",
+      "best_auc": 0.4937
+    }
+  },
+  "feature_selection": {
+    "top_25": {
+      "n_features": 25,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.6232,
+          "per_fold": [
+            0.5195,
+            0.7403,
+            0.5758,
+            0.6364,
+            0.6439
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.765,
+          "per_fold": [
+            0.6948,
+            0.8084,
+            0.7689,
+            0.7424,
+            0.8106
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.7532,
+          "per_fold": [
+            0.6883,
+            0.8052,
+            0.8106,
+            0.6667,
+            0.7955
+          ]
+        }
+      },
+      "best_classifier": "RandomForest",
+      "best_auc": 0.765
+    },
+    "top_50": {
+      "n_features": 50,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.6463,
+          "per_fold": [
+            0.526,
+            0.7662,
+            0.6439,
+            0.6591,
+            0.6364
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.7313,
+          "per_fold": [
+            0.6364,
+            0.8117,
+            0.6553,
+            0.7424,
+            0.8106
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.7136,
+          "per_fold": [
+            0.6688,
+            0.7403,
+            0.7803,
+            0.6591,
+            0.7197
+          ]
+        }
+      },
+      "best_classifier": "RandomForest",
+      "best_auc": 0.7313
+    },
+    "top_100": {
+      "n_features": 100,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.5985,
+          "per_fold": [
+            0.5779,
+            0.6494,
+            0.5,
+            0.6136,
+            0.6515
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.7268,
+          "per_fold": [
+            0.6494,
+            0.75,
+            0.7235,
+            0.7727,
+            0.7386
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.6959,
+          "per_fold": [
+            0.6883,
+            0.7078,
+            0.6288,
+            0.7197,
+            0.7348
+          ]
+        }
+      },
+      "best_classifier": "RandomForest",
+      "best_auc": 0.7268
+    },
+    "top_200": {
+      "n_features": 200,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.571,
+          "per_fold": [
+            0.526,
+            0.5714,
+            0.4545,
+            0.6061,
+            0.697
+          ]
+        },
+        "RandomForest": {
+          "auc_roc": 0.7037,
+          "per_fold": [
+            0.7175,
+            0.7403,
+            0.6212,
+            0.7273,
+            0.7121
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.7017,
+          "per_fold": [
+            0.5844,
+            0.7273,
+            0.5909,
+            0.8485,
+            0.7576
+          ]
+        }
+      },
+      "best_classifier": "RandomForest",
+      "best_auc": 0.7037
+    }
+  },
+  "mi_ranking_top30": [
+    {
+      "rank": 1,
+      "feature": "mfcc1_sma3_amean_std",
+      "mi_score": 0.115435
+    },
+    {
+      "rank": 2,
+      "feature": "loudness_sma3_percentile20.0_mean",
+      "mi_score": 0.102561
+    },
+    {
+      "rank": 3,
+      "feature": "spectralFlux_sma3_amean_std",
+      "mi_score": 0.099403
+    },
+    {
+      "rank": 4,
+      "feature": "F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2_p90",
+      "mi_score": 0.090817
+    },
+    {
+      "rank": 5,
+      "feature": "spectralFlux_sma3_amean_mean",
+      "mi_score": 0.088103
+    },
+    {
+      "rank": 6,
+      "feature": "spectralFluxV_sma3nz_amean_p50",
+      "mi_score": 0.083966
+    },
+    {
+      "rank": 7,
+      "feature": "spectralFlux_sma3_amean_p90",
+      "mi_score": 0.08245
+    },
+    {
+      "rank": 8,
+      "feature": "mfcc1_sma3_amean_p90",
+      "mi_score": 0.080104
+    },
+    {
+      "rank": 9,
+      "feature": "loudness_sma3_percentile20.0_std",
+      "mi_score": 0.076393
+    },
+    {
+      "rank": 10,
+      "feature": "loudness_sma3_stddevFallingSlope_p90",
+      "mi_score": 0.075499
+    },
+    {
+      "rank": 11,
+      "feature": "mfcc1V_sma3nz_stddevNorm_std",
+      "mi_score": 0.074088
+    },
+    {
+      "rank": 12,
+      "feature": "HNRdBACF_sma3nz_stddevNorm_p50",
+      "mi_score": 0.073754
+    },
+    {
+      "rank": 13,
+      "feature": "loudness_sma3_stddevFallingSlope_std",
+      "mi_score": 0.073527
+    },
+    {
+      "rank": 14,
+      "feature": "mfcc2_sma3_stddevNorm_p50",
+      "mi_score": 0.072681
+    },
+    {
+      "rank": 15,
+      "feature": "loudness_sma3_meanFallingSlope_mean",
+      "mi_score": 0.07255
+    },
+    {
+      "rank": 16,
+      "feature": "F1amplitudeLogRelF0_sma3nz_stddevNorm_mean",
+      "mi_score": 0.071072
+    },
+    {
+      "rank": 17,
+      "feature": "hammarbergIndexV_sma3nz_stddevNorm_mean",
+      "mi_score": 0.070953
+    },
+    {
+      "rank": 18,
+      "feature": "mfcc3_sma3_amean_std",
+      "mi_score": 0.070157
+    },
+    {
+      "rank": 19,
+      "feature": "loudness_sma3_meanRisingSlope_p50",
+      "mi_score": 0.069479
+    },
+    {
+      "rank": 20,
+      "feature": "F2amplitudeLogRelF0_sma3nz_stddevNorm_mean",
+      "mi_score": 0.069388
+    },
+    {
+      "rank": 21,
+      "feature": "spectralFluxV_sma3nz_amean_mean",
+      "mi_score": 0.06926
+    },
+    {
+      "rank": 22,
+      "feature": "spectralFluxV_sma3nz_stddevNorm_std",
+      "mi_score": 0.06879
+    },
+    {
+      "rank": 23,
+      "feature": "F3amplitudeLogRelF0_sma3nz_amean_mean",
+      "mi_score": 0.067115
+    },
+    {
+      "rank": 24,
+      "feature": "loudness_sma3_percentile50.0_std",
+      "mi_score": 0.064105
+    },
+    {
+      "rank": 25,
+      "feature": "loudness_sma3_amean_p10",
+      "mi_score": 0.063767
+    },
+    {
+      "rank": 26,
+      "feature": "hammarbergIndexV_sma3nz_stddevNorm_p50",
+      "mi_score": 0.063595
+    },
+    {
+      "rank": 27,
+      "feature": "rqa_mfcc3_LAM",
+      "mi_score": 0.063381
+    },
+    {
+      "rank": 28,
+      "feature": "jitterLocal_sma3nz_amean_p50",
+      "mi_score": 0.063125
+    },
+    {
+      "rank": 29,
+      "feature": "StddevVoicedSegmentLengthSec_p10",
+      "mi_score": 0.062944
+    },
+    {
+      "rank": 30,
+      "feature": "F2amplitudeLogRelF0_sma3nz_amean_mean",
+      "mi_score": 0.061759
+    }
+  ]
+}

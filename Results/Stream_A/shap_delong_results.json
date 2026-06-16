@@ -1,0 +1,429 @@
+{
+  "timestamp": "2026-05-07T09:16:04.825313",
+  "analysis": "SHAP + DeLong + Bootstrap \u0394AUC",
+  "osf_ref": "osf.io/bsvrj",
+  "n_subjects": 142,
+  "feature_groups": {
+    "eGeMAPSv02_only": {
+      "shap_LogisticRegression": {
+        "top_10": [
+          {
+            "rank": 1,
+            "feature": "StddevUnvoicedSegmentLength_p10",
+            "mean_abs_shap": 0.887028
+          },
+          {
+            "rank": 2,
+            "feature": "logRelF0-H1-H2_sma3nz_amean_p10",
+            "mean_abs_shap": 0.571431
+          },
+          {
+            "rank": 3,
+            "feature": "mfcc4_sma3_stddevNorm_p90",
+            "mean_abs_shap": 0.451788
+          },
+          {
+            "rank": 4,
+            "feature": "loudness_sma3_meanFallingSlope_p10",
+            "mean_abs_shap": 0.438455
+          },
+          {
+            "rank": 5,
+            "feature": "mfcc4V_sma3nz_stddevNorm_p50",
+            "mean_abs_shap": 0.428286
+          },
+          {
+            "rank": 6,
+            "feature": "StddevVoicedSegmentLengthSec_p10",
+            "mean_abs_shap": 0.386547
+          },
+          {
+            "rank": 7,
+            "feature": "F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope_std",
+            "mean_abs_shap": 0.38436
+          },
+          {
+            "rank": 8,
+            "feature": "F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope_p10",
+            "mean_abs_shap": 0.380626
+          },
+          {
+            "rank": 9,
+            "feature": "F0semitoneFrom27.5Hz_sma3nz_meanRisingSlope_p10",
+            "mean_abs_shap": 0.350887
+          },
+          {
+            "rank": 10,
+            "feature": "shimmerLocaldB_sma3nz_stddevNorm_p10",
+            "mean_abs_shap": 0.347811
+          }
+        ],
+        "method": "LinearExplainer"
+      },
+      "shap_RandomForest": {
+        "error": "only length-1 arrays can be converted to Python scalars"
+      },
+      "shap_GradientBoostedTrees": {
+        "top_10": [
+          {
+            "rank": 1,
+            "feature": "HNRdBACF_sma3nz_amean_p90",
+            "mean_abs_shap": 3.840497
+          },
+          {
+            "rank": 2,
+            "feature": "F3bandwidth_sma3nz_amean_p10",
+            "mean_abs_shap": 3.402221
+          },
+          {
+            "rank": 3,
+            "feature": "F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2_mean",
+            "mean_abs_shap": 1.582435
+          },
+          {
+            "rank": 4,
+            "feature": "mfcc3V_sma3nz_stddevNorm_mean",
+            "mean_abs_shap": 1.540148
+          },
+          {
+            "rank": 5,
+            "feature": "logRelF0-H1-H2_sma3nz_amean_p90",
+            "mean_abs_shap": 1.288579
+          },
+          {
+            "rank": 6,
+            "feature": "slopeV500-1500_sma3nz_stddevNorm_std",
+            "mean_abs_shap": 0.99872
+          },
+          {
+            "rank": 7,
+            "feature": "F1frequency_sma3nz_amean_p90",
+            "mean_abs_shap": 0.431008
+          },
+          {
+            "rank": 8,
+            "feature": "logRelF0-H1-H2_sma3nz_amean_p50",
+            "mean_abs_shap": 0.42308
+          },
+          {
+            "rank": 9,
+            "feature": "HNRdBACF_sma3nz_stddevNorm_p50",
+            "mean_abs_shap": 0.40297
+          },
+          {
+            "rank": 10,
+            "feature": "slopeUV500-1500_sma3nz_amean_p10",
+            "mean_abs_shap": 0.393698
+          }
+        ],
+        "method": "TreeExplainer"
+      },
+      "h3_assessment": {
+        "LogisticRegression": {
+          "cv_f0_in_top5": true,
+          "cv_energy_in_top5": true,
+          "verdict": "SUPPORTED"
+        },
+        "GradientBoostedTrees": {
+          "cv_f0_in_top5": true,
+          "cv_energy_in_top5": false,
+          "verdict": "PARTIALLY"
+        }
+      },
+      "h2_bootstrap_ci": {
+        "mean_delta_auc": 0.0457,
+        "ci_lower": -0.0734,
+        "ci_upper": 0.1599,
+        "non_inferiority_met": true,
+        "superiority_met": false,
+        "n_bootstrap": 10000
+      }
+    },
+    "RQA_only": {
+      "shap_LogisticRegression": {
+        "top_10": [
+          {
+            "rank": 1,
+            "feature": "rqa_mfcc4_LAM",
+            "mean_abs_shap": 0.796458
+          },
+          {
+            "rank": 2,
+            "feature": "rqa_F1bandwidth_ENTR",
+            "mean_abs_shap": 0.688579
+          },
+          {
+            "rank": 3,
+            "feature": "rqa_mfcc2_ENTR",
+            "mean_abs_shap": 0.668103
+          },
+          {
+            "rank": 4,
+            "feature": "rqa_F1bandwidth_RR",
+            "mean_abs_shap": 0.602074
+          },
+          {
+            "rank": 5,
+            "feature": "rqa_mfcc1_LAM",
+            "mean_abs_shap": 0.596476
+          },
+          {
+            "rank": 6,
+            "feature": "rqa_F1bandwidth_TT",
+            "mean_abs_shap": 0.580496
+          },
+          {
+            "rank": 7,
+            "feature": "rqa_jitterLocal_RR",
+            "mean_abs_shap": 0.567943
+          },
+          {
+            "rank": 8,
+            "feature": "rqa_mfcc3_DET",
+            "mean_abs_shap": 0.546308
+          },
+          {
+            "rank": 9,
+            "feature": "rqa_jitterLocal_LAM",
+            "mean_abs_shap": 0.546117
+          },
+          {
+            "rank": 10,
+            "feature": "rqa_mfcc4_RR",
+            "mean_abs_shap": 0.4571
+          }
+        ],
+        "method": "LinearExplainer"
+      },
+      "shap_RandomForest": {
+        "error": "only length-1 arrays can be converted to Python scalars"
+      },
+      "shap_GradientBoostedTrees": {
+        "top_10": [
+          {
+            "rank": 1,
+            "feature": "rqa_F1bandwidth_LAM",
+            "mean_abs_shap": 1.463859
+          },
+          {
+            "rank": 2,
+            "feature": "rqa_mfcc1_RR",
+            "mean_abs_shap": 1.109251
+          },
+          {
+            "rank": 3,
+            "feature": "rqa_spectralFlux_LAM",
+            "mean_abs_shap": 0.791998
+          },
+          {
+            "rank": 4,
+            "feature": "rqa_F3bandwidth_RR",
+            "mean_abs_shap": 0.75607
+          },
+          {
+            "rank": 5,
+            "feature": "rqa_F2bandwidth_ENTR",
+            "mean_abs_shap": 0.751369
+          },
+          {
+            "rank": 6,
+            "feature": "rqa_F1bandwidth_TT",
+            "mean_abs_shap": 0.363621
+          },
+          {
+            "rank": 7,
+            "feature": "rqa_mfcc3_RR",
+            "mean_abs_shap": 0.354421
+          },
+          {
+            "rank": 8,
+            "feature": "rqa_mfcc3_LAM",
+            "mean_abs_shap": 0.349154
+          },
+          {
+            "rank": 9,
+            "feature": "rqa_mfcc4_TT",
+            "mean_abs_shap": 0.325797
+          },
+          {
+            "rank": 10,
+            "feature": "rqa_F1bandwidth_RR",
+            "mean_abs_shap": 0.316015
+          }
+        ],
+        "method": "TreeExplainer"
+      },
+      "h3_assessment": {
+        "LogisticRegression": {
+          "cv_f0_in_top5": false,
+          "cv_energy_in_top5": false,
+          "verdict": "NOT SUPPORTED"
+        },
+        "GradientBoostedTrees": {
+          "cv_f0_in_top5": false,
+          "cv_energy_in_top5": false,
+          "verdict": "NOT SUPPORTED"
+        }
+      },
+      "h2_bootstrap_ci": {
+        "mean_delta_auc": 0.0028,
+        "ci_lower": -0.1107,
+        "ci_upper": 0.1126,
+        "non_inferiority_met": false,
+        "superiority_met": false,
+        "n_bootstrap": 10000
+      }
+    },
+    "Combined": {
+      "shap_LogisticRegression": {
+        "top_10": [
+          {
+            "rank": 1,
+            "feature": "rqa_F1bandwidth_TT",
+            "mean_abs_shap": 0.577057
+          },
+          {
+            "rank": 2,
+            "feature": "StddevUnvoicedSegmentLength_p10",
+            "mean_abs_shap": 0.540794
+          },
+          {
+            "rank": 3,
+            "feature": "rqa_F2bandwidth_TT",
+            "mean_abs_shap": 0.489506
+          },
+          {
+            "rank": 4,
+            "feature": "n_segments",
+            "mean_abs_shap": 0.437034
+          },
+          {
+            "rank": 5,
+            "feature": "logRelF0-H1-H2_sma3nz_amean_p10",
+            "mean_abs_shap": 0.408087
+          },
+          {
+            "rank": 6,
+            "feature": "rqa_mfcc3_RR",
+            "mean_abs_shap": 0.341726
+          },
+          {
+            "rank": 7,
+            "feature": "StddevVoicedSegmentLengthSec_p10",
+            "mean_abs_shap": 0.328723
+          },
+          {
+            "rank": 8,
+            "feature": "F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope_p10",
+            "mean_abs_shap": 0.327807
+          },
+          {
+            "rank": 9,
+            "feature": "mfcc4_sma3_stddevNorm_p90",
+            "mean_abs_shap": 0.323137
+          },
+          {
+            "rank": 10,
+            "feature": "F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope_std",
+            "mean_abs_shap": 0.315717
+          }
+        ],
+        "method": "LinearExplainer"
+      },
+      "shap_RandomForest": {
+        "error": "only length-1 arrays can be converted to Python scalars"
+      },
+      "shap_GradientBoostedTrees": {
+        "top_10": [
+          {
+            "rank": 1,
+            "feature": "F3bandwidth_sma3nz_amean_p10",
+            "mean_abs_shap": 4.892085
+          },
+          {
+            "rank": 2,
+            "feature": "HNRdBACF_sma3nz_amean_p90",
+            "mean_abs_shap": 2.541983
+          },
+          {
+            "rank": 3,
+            "feature": "mfcc3V_sma3nz_stddevNorm_mean",
+            "mean_abs_shap": 1.948695
+          },
+          {
+            "rank": 4,
+            "feature": "logRelF0-H1-H2_sma3nz_amean_p90",
+            "mean_abs_shap": 1.452864
+          },
+          {
+            "rank": 5,
+            "feature": "F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2_mean",
+            "mean_abs_shap": 0.975925
+          },
+          {
+            "rank": 6,
+            "feature": "slopeV500-1500_sma3nz_stddevNorm_std",
+            "mean_abs_shap": 0.844812
+          },
+          {
+            "rank": 7,
+            "feature": "logRelF0-H1-H2_sma3nz_amean_p50",
+            "mean_abs_shap": 0.692444
+          },
+          {
+            "rank": 8,
+            "feature": "MeanUnvoicedSegmentLength_p50",
+            "mean_abs_shap": 0.502499
+          },
+          {
+            "rank": 9,
+            "feature": "mfcc2V_sma3nz_amean_std",
+            "mean_abs_shap": 0.459022
+          },
+          {
+            "rank": 10,
+            "feature": "F2bandwidth_sma3nz_amean_p90",
+            "mean_abs_shap": 0.392389
+          }
+        ],
+        "method": "TreeExplainer"
+      },
+      "h3_assessment": {
+        "LogisticRegression": {
+          "cv_f0_in_top5": true,
+          "cv_energy_in_top5": false,
+          "verdict": "PARTIALLY"
+        },
+        "GradientBoostedTrees": {
+          "cv_f0_in_top5": true,
+          "cv_energy_in_top5": false,
+          "verdict": "PARTIALLY"
+        }
+      },
+      "h2_bootstrap_ci": {
+        "mean_delta_auc": 0.0522,
+        "ci_lower": -0.0658,
+        "ci_upper": 0.167,
+        "non_inferiority_met": true,
+        "superiority_met": false,
+        "n_bootstrap": 10000
+      }
+    }
+  },
+  "delong_tests": {
+    "eGeMAPSv02_vs_Combined": {
+      "auc_egemaps": 0.6251,
+      "auc_combined": 0.6318,
+      "z_statistic": -0.4372,
+      "p_value": 0.662,
+      "significant": false
+    },
+    "eGeMAPSv02_vs_RQA_only": {
+      "auc_egemaps": 0.6251,
+      "auc_rqa": 0.583,
+      "z_statistic": 0.5313,
+      "p_value": 0.5952,
+      "significant": false
+    }
+  }
+}

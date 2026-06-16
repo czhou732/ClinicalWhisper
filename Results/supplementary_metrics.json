@@ -1,0 +1,276 @@
+{
+  "timestamp": "2026-05-20T11:31:22.827206",
+  "purpose": "Pre-registered supplementary metrics (audit items 9, 10b-10e)",
+  "stream_a": {
+    "eGeMAPSv02_only": {
+      "LogisticRegression": {
+        "auc_roc": 0.5619,
+        "auc_pr": 0.2617,
+        "threshold": 0.0581,
+        "sensitivity": 0.625,
+        "specificity": 0.5545,
+        "balanced_accuracy": 0.5898,
+        "youdens_j": 0.1795,
+        "confusion_matrix": {
+          "TN": 61,
+          "FP": 49,
+          "FN": 12,
+          "TP": 20
+        }
+      },
+      "RandomForest": {
+        "auc_roc": 0.6074,
+        "auc_pr": 0.4051,
+        "threshold": 0.436,
+        "sensitivity": 0.3438,
+        "specificity": 0.9636,
+        "balanced_accuracy": 0.6537,
+        "youdens_j": 0.3074,
+        "confusion_matrix": {
+          "TN": 106,
+          "FP": 4,
+          "FN": 21,
+          "TP": 11
+        }
+      },
+      "GradientBoostedTrees": {
+        "auc_roc": 0.6136,
+        "auc_pr": 0.3886,
+        "threshold": 0.0012,
+        "sensitivity": 0.625,
+        "specificity": 0.6091,
+        "balanced_accuracy": 0.617,
+        "youdens_j": 0.2341,
+        "confusion_matrix": {
+          "TN": 67,
+          "FP": 43,
+          "FN": 12,
+          "TP": 20
+        }
+      }
+    },
+    "RQA_only": {
+      "LogisticRegression": {
+        "auc_roc": 0.583,
+        "auc_pr": 0.2963,
+        "threshold": 0.1034,
+        "sensitivity": 0.875,
+        "specificity": 0.3273,
+        "balanced_accuracy": 0.6011,
+        "youdens_j": 0.2023,
+        "confusion_matrix": {
+          "TN": 36,
+          "FP": 74,
+          "FN": 4,
+          "TP": 28
+        }
+      },
+      "RandomForest": {
+        "auc_roc": 0.4714,
+        "auc_pr": 0.2212,
+        "threshold": 0.258,
+        "sensitivity": 0.4688,
+        "specificity": 0.6,
+        "balanced_accuracy": 0.5344,
+        "youdens_j": 0.0688,
+        "confusion_matrix": {
+          "TN": 66,
+          "FP": 44,
+          "FN": 17,
+          "TP": 15
+        }
+      },
+      "GradientBoostedTrees": {
+        "auc_roc": 0.5776,
+        "auc_pr": 0.3029,
+        "threshold": 0.2324,
+        "sensitivity": 0.375,
+        "specificity": 0.8818,
+        "balanced_accuracy": 0.6284,
+        "youdens_j": 0.2568,
+        "confusion_matrix": {
+          "TN": 97,
+          "FP": 13,
+          "FN": 20,
+          "TP": 12
+        }
+      }
+    },
+    "Combined": {
+      "LogisticRegression": {
+        "auc_roc": 0.5946,
+        "auc_pr": 0.2812,
+        "threshold": 0.0244,
+        "sensitivity": 0.7188,
+        "specificity": 0.5,
+        "balanced_accuracy": 0.6094,
+        "youdens_j": 0.2188,
+        "confusion_matrix": {
+          "TN": 55,
+          "FP": 55,
+          "FN": 9,
+          "TP": 23
+        }
+      },
+      "RandomForest": {
+        "auc_roc": 0.6331,
+        "auc_pr": 0.4081,
+        "threshold": 0.432,
+        "sensitivity": 0.3438,
+        "specificity": 0.9364,
+        "balanced_accuracy": 0.6401,
+        "youdens_j": 0.2801,
+        "confusion_matrix": {
+          "TN": 103,
+          "FP": 7,
+          "FN": 21,
+          "TP": 11
+        }
+      },
+      "GradientBoostedTrees": {
+        "auc_roc": 0.6196,
+        "auc_pr": 0.3684,
+        "threshold": 0.0034,
+        "sensitivity": 0.5625,
+        "specificity": 0.6909,
+        "balanced_accuracy": 0.6267,
+        "youdens_j": 0.2534,
+        "confusion_matrix": {
+          "TN": 76,
+          "FP": 34,
+          "FN": 14,
+          "TP": 18
+        }
+      }
+    },
+    "confusion_matrix_borderline": {
+      "n_false_negatives": 21,
+      "n_true_positives": 11,
+      "fn_borderline_3_4": 15,
+      "fn_severe_5_6": 6,
+      "tp_borderline_3_4": 8,
+      "tp_severe_5_6": 3,
+      "fn_mean_anhedonia_sum": 3.95,
+      "tp_mean_anhedonia_sum": 4.0,
+      "fn_borderline_pct": 71.4,
+      "interpretation": "FNs cluster at borderline"
+    },
+    "demographic_moderators": {
+      "female": {
+        "n": 63,
+        "n_anhedonic": 18,
+        "prevalence": 0.286,
+        "auc_roc": 0.5741
+      },
+      "male": {
+        "n": 79,
+        "n_anhedonic": 14,
+        "prevalence": 0.177,
+        "auc_roc": 0.6692
+      },
+      "gender_interaction_note": "Subgroup AUCs compared descriptively. No formal interaction test performed due to small subgroup sizes and the risk of further stratification in an already underpowered sample."
+    },
+    "severity_prediction_anhedonia_sum": {
+      "target": "anhedonia_sum",
+      "n": 142,
+      "spearman_rho": 0.0462,
+      "spearman_p": 0.585264,
+      "pearson_r": -0.0121,
+      "pearson_p": 0.886624,
+      "mae": 3.3289,
+      "ridge_alpha_note": "Selected via internal 5-fold CV (RidgeCV)"
+    },
+    "severity_prediction_phq8_total": {
+      "target": "PHQ8_Score",
+      "n": 142,
+      "spearman_rho": 0.0394,
+      "spearman_p": 0.641908,
+      "pearson_r": 0.0,
+      "pearson_p": 0.999733,
+      "mae": 17.7968,
+      "ridge_alpha_note": "Selected via internal 5-fold CV (RidgeCV)"
+    },
+    "threshold_sensitivity": {
+      "geq2": {
+        "n_pos": 70,
+        "n_neg": 72,
+        "prevalence": 0.493,
+        "auc_roc": 0.6273
+      },
+      "geq3": {
+        "n_pos": 32,
+        "n_neg": 110,
+        "prevalence": 0.225,
+        "auc_roc": 0.6074
+      },
+      "geq4": {
+        "n_pos": 19,
+        "n_neg": 123,
+        "prevalence": 0.134,
+        "auc_roc": 0.7189
+      }
+    },
+    "domain_ablation": {
+      "full_eGeMAPSv02": {
+        "n_features": 447,
+        "best_classifier": "LogisticRegression",
+        "best_auc": "?"
+      },
+      "full_combined": {
+        "n_features": 521,
+        "best_classifier": "LogisticRegression",
+        "best_auc": "?"
+      },
+      "full_rqa_only": {
+        "n_features": 74,
+        "best_classifier": "LogisticRegression",
+        "best_auc": "?"
+      },
+      "domain_prosodic": {
+        "n_features": 200,
+        "best_classifier": "LogisticRegression",
+        "best_auc": "?"
+      },
+      "domain_spectral": {
+        "n_features": 235,
+        "best_classifier": "LogisticRegression",
+        "best_auc": "?"
+      },
+      "domain_other": {
+        "n_features": 6,
+        "best_classifier": "LogisticRegression",
+        "best_auc": "?"
+      },
+      "domain_temporal": {
+        "n_features": 6,
+        "best_classifier": "LogisticRegression",
+        "best_auc": "?"
+      }
+    }
+  },
+  "stream_b": {
+    "pre_fmriprep": {
+      "n_subjects": 234,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc": 0.5803402646502835,
+          "auc_roc_std": 0.03782932952510896
+        },
+        "RandomForest": {
+          "auc_roc": 0.5231411468178954,
+          "auc_roc_std": 0.08835839839822386
+        },
+        "GradientBoostedTrees": {
+          "auc_roc": 0.5175330812854442,
+          "auc_roc_std": 0.0773612087658701
+        }
+      },
+      "permutation_p": 0.056943056943056944,
+      "permutation_best_clf": null,
+      "true_auc": 0.5803402646502835
+    },
+    "fmriprep": {
+      "error": "Unknown format code 'f' for object of type 'str'"
+    }
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "timestamp": "2026-05-06T22:00:15.901355",
+  "analysis_type": "RQA Integration \u2014 3-way feature ablation",
+  "osf_reference": "osf.io/bsvrj",
+  "n_subjects": 142,
+  "class_balance": {
+    "class_0": 110,
+    "class_1": 32
+  },
+  "stream_b_comparison_auc": 0.58,
+  "feature_groups": {
+    "eGeMAPSv02_only": {
+      "n_features": 447,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc_mean": 0.5584,
+          "auc_roc_std": 0.1131,
+          "ci_lower": 0.4477,
+          "ci_upper": 0.6743,
+          "auc_pr": 0.2602,
+          "balanced_accuracy": 0.5892,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.4416,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.6623,
+            0.7208,
+            0.5,
+            0.4242,
+            0.4848
+          ]
+        },
+        "RandomForest": {
+          "auc_roc_mean": 0.6303,
+          "auc_roc_std": 0.0634,
+          "ci_lower": 0.5066,
+          "ci_upper": 0.7399,
+          "auc_pr": 0.387,
+          "balanced_accuracy": 0.631,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.3697,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.6623,
+            0.724,
+            0.5341,
+            0.6326,
+            0.5985
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc_mean": 0.6212,
+          "auc_roc_std": 0.1011,
+          "ci_lower": 0.4974,
+          "ci_upper": 0.7337,
+          "auc_pr": 0.3878,
+          "balanced_accuracy": 0.6176,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.3788,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.6364,
+            0.6818,
+            0.4242,
+            0.6591,
+            0.7045
+          ]
+        }
+      },
+      "permutation_test": {
+        "classifier": "RandomForest",
+        "true_auc": 0.6303,
+        "null_mean": 0.5018,
+        "null_std": 0.0756,
+        "p_value": 0.048951,
+        "h1_result": "SUPPORTED",
+        "n_permutations": 1000
+      },
+      "h2_noninferiority": {
+        "delta_auc": 0.0503,
+        "stream_a_auc": 0.6303,
+        "stream_b_auc": 0.58,
+        "criterion": "\u0394AUC lower CI > -0.10",
+        "note": "Full bootstrap \u0394AUC CI requires both streams on shared CV \u2014 reported as point estimate"
+      },
+      "feature_importance_top10": [
+        {
+          "rank": 1,
+          "feature": "StddevUnvoicedSegmentLength_p10",
+          "abs_coef": 1.0598
+        },
+        {
+          "rank": 2,
+          "feature": "logRelF0-H1-H2_sma3nz_amean_p10",
+          "abs_coef": 0.7426
+        },
+        {
+          "rank": 3,
+          "feature": "mfcc4V_sma3nz_stddevNorm_mean",
+          "abs_coef": 0.6562
+        },
+        {
+          "rank": 4,
+          "feature": "slopeV500-1500_sma3nz_stddevNorm_mean",
+          "abs_coef": 0.6129
+        },
+        {
+          "rank": 5,
+          "feature": "StddevVoicedSegmentLengthSec_p10",
+          "abs_coef": 0.6123
+        },
+        {
+          "rank": 6,
+          "feature": "logRelF0-H1-A3_sma3nz_stddevNorm_std",
+          "abs_coef": 0.6108
+        },
+        {
+          "rank": 7,
+          "feature": "mfcc4_sma3_stddevNorm_p90",
+          "abs_coef": 0.5495
+        },
+        {
+          "rank": 8,
+          "feature": "loudness_sma3_meanFallingSlope_p10",
+          "abs_coef": 0.5398
+        },
+        {
+          "rank": 9,
+          "feature": "F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope_p10",
+          "abs_coef": 0.5087
+        },
+        {
+          "rank": 10,
+          "feature": "F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope_std",
+          "abs_coef": 0.5053
+        }
+      ],
+      "h3_exploratory": {
+        "cv_f0_in_top5": true,
+        "cv_energy_in_top5": false,
+        "h3_result": "PARTIALLY SUPPORTED"
+      }
+    },
+    "RQA_only": {
+      "n_features": 74,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc_mean": 0.5835,
+          "auc_roc_std": 0.0203,
+          "ci_lower": 0.4693,
+          "ci_upper": 0.6926,
+          "auc_pr": 0.2963,
+          "balanced_accuracy": 0.6011,
+          "train_auc_mean": 0.8894,
+          "auc_gap": 0.3059,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.5909,
+            0.5844,
+            0.5909,
+            0.5455,
+            0.6061
+          ]
+        },
+        "RandomForest": {
+          "auc_roc_mean": 0.4792,
+          "auc_roc_std": 0.0881,
+          "ci_lower": 0.3803,
+          "ci_upper": 0.6045,
+          "auc_pr": 0.2111,
+          "balanced_accuracy": 0.5366,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.5208,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.4221,
+            0.5649,
+            0.3333,
+            0.5341,
+            0.5417
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc_mean": 0.5712,
+          "auc_roc_std": 0.1673,
+          "ci_lower": 0.4204,
+          "ci_upper": 0.6811,
+          "auc_pr": 0.2953,
+          "balanced_accuracy": 0.6128,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.4288,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.4805,
+            0.7013,
+            0.4015,
+            0.8333,
+            0.4394
+          ]
+        }
+      },
+      "permutation_test": {
+        "classifier": "LogisticRegression",
+        "true_auc": 0.5835,
+        "null_mean": 0.4967,
+        "null_std": 0.0805,
+        "p_value": 0.143856,
+        "h1_result": "NOT SUPPORTED",
+        "n_permutations": 1000
+      },
+      "h2_noninferiority": {
+        "delta_auc": 0.0035,
+        "stream_a_auc": 0.5835,
+        "stream_b_auc": 0.58,
+        "criterion": "\u0394AUC lower CI > -0.10",
+        "note": "Full bootstrap \u0394AUC CI requires both streams on shared CV \u2014 reported as point estimate"
+      },
+      "feature_importance_top10": [
+        {
+          "rank": 1,
+          "feature": "rqa_mfcc4_LAM",
+          "abs_coef": 1.0752
+        },
+        {
+          "rank": 2,
+          "feature": "rqa_F1bandwidth_ENTR",
+          "abs_coef": 1.0336
+        },
+        {
+          "rank": 3,
+          "feature": "rqa_F1bandwidth_RR",
+          "abs_coef": 0.8849
+        },
+        {
+          "rank": 4,
+          "feature": "rqa_mfcc2_ENTR",
+          "abs_coef": 0.8605
+        },
+        {
+          "rank": 5,
+          "feature": "rqa_F1bandwidth_TT",
+          "abs_coef": 0.7873
+        },
+        {
+          "rank": 6,
+          "feature": "rqa_jitterLocal_RR",
+          "abs_coef": 0.7205
+        },
+        {
+          "rank": 7,
+          "feature": "rqa_mfcc1_LAM",
+          "abs_coef": 0.7168
+        },
+        {
+          "rank": 8,
+          "feature": "rqa_jitterLocal_LAM",
+          "abs_coef": 0.6977
+        },
+        {
+          "rank": 9,
+          "feature": "rqa_mfcc3_DET",
+          "abs_coef": 0.6707
+        },
+        {
+          "rank": 10,
+          "feature": "rqa_mfcc4_RR",
+          "abs_coef": 0.6351
+        }
+      ],
+      "h3_exploratory": {
+        "cv_f0_in_top5": false,
+        "cv_energy_in_top5": false,
+        "h3_result": "NOT SUPPORTED"
+      }
+    },
+    "Combined_eGeMAPSv02_RQA": {
+      "n_features": 521,
+      "classifiers": {
+        "LogisticRegression": {
+          "auc_roc_mean": 0.5911,
+          "auc_roc_std": 0.1115,
+          "ci_lower": 0.4847,
+          "ci_upper": 0.7031,
+          "auc_pr": 0.28,
+          "balanced_accuracy": 0.623,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.4089,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.6169,
+            0.7857,
+            0.553,
+            0.447,
+            0.553
+          ]
+        },
+        "RandomForest": {
+          "auc_roc_mean": 0.6329,
+          "auc_roc_std": 0.0587,
+          "ci_lower": 0.5142,
+          "ci_upper": 0.747,
+          "auc_pr": 0.384,
+          "balanced_accuracy": 0.6335,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.3671,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.6364,
+            0.6948,
+            0.5227,
+            0.6667,
+            0.6439
+          ]
+        },
+        "GradientBoostedTrees": {
+          "auc_roc_mean": 0.6485,
+          "auc_roc_std": 0.121,
+          "ci_lower": 0.5007,
+          "ci_upper": 0.7362,
+          "auc_pr": 0.3791,
+          "balanced_accuracy": 0.6259,
+          "train_auc_mean": 1.0,
+          "auc_gap": 0.3515,
+          "overfit_flag": "OVERFITTING",
+          "per_fold_aucs": [
+            0.5909,
+            0.6818,
+            0.4545,
+            0.8182,
+            0.697
+          ]
+        }
+      },
+      "permutation_test": {
+        "classifier": "GradientBoostedTrees",
+        "true_auc": 0.6485,
+        "null_mean": 0.5018,
+        "null_std": 0.0776,
+        "p_value": 0.031968,
+        "h1_result": "SUPPORTED",
+        "n_permutations": 1000
+      },
+      "h2_noninferiority": {
+        "delta_auc": 0.0685,
+        "stream_a_auc": 0.6485,
+        "stream_b_auc": 0.58,
+        "criterion": "\u0394AUC lower CI > -0.10",
+        "note": "Full bootstrap \u0394AUC CI requires both streams on shared CV \u2014 reported as point estimate"
+      },
+      "feature_importance_top10": [
+        {
+          "rank": 1,
+          "feature": "rqa_F1bandwidth_TT",
+          "abs_coef": 0.7826
+        },
+        {
+          "rank": 2,
+          "feature": "StddevUnvoicedSegmentLength_p10",
+          "abs_coef": 0.6461
+        },
+        {
+          "rank": 3,
+          "feature": "rqa_F2bandwidth_TT",
+          "abs_coef": 0.6254
+        },
+        {
+          "rank": 4,
+          "feature": "slopeV500-1500_sma3nz_stddevNorm_mean",
+          "abs_coef": 0.6091
+        },
+        {
+          "rank": 5,
+          "feature": "n_segments",
+          "abs_coef": 0.5652
+        },
+        {
+          "rank": 6,
+          "feature": "logRelF0-H1-H2_sma3nz_amean_p10",
+          "abs_coef": 0.5303
+        },
+        {
+          "rank": 7,
+          "feature": "StddevVoicedSegmentLengthSec_p10",
+          "abs_coef": 0.5207
+        },
+        {
+          "rank": 8,
+          "feature": "logRelF0-H1-A3_sma3nz_stddevNorm_std",
+          "abs_coef": 0.4628
+        },
+        {
+          "rank": 9,
+          "feature": "F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope_p10",
+          "abs_coef": 0.4381
+        },
+        {
+          "rank": 10,
+          "feature": "rqa_mfcc3_RR",
+          "abs_coef": 0.4268
+        }
+      ],
+      "h3_exploratory": {
+        "cv_f0_in_top5": false,
+        "cv_energy_in_top5": false,
+        "h3_result": "NOT SUPPORTED"
+      }
+    }
+  },
+  "rqa_outcome_correlations_top10": [
+    {
+      "feature": "rqa_mfcc1_RR",
+      "r": 0.174,
+      "p": 0.0384
+    },
+    {
+      "feature": "rqa_mfcc1_LAM",
+      "r": 0.1489,
+      "p": 0.0769
+    },
+    {
+      "feature": "rqa_F1bandwidth_TT",
+      "r": -0.1309,
+      "p": 0.1204
+    },
+    {
+      "feature": "rqa_jitterLocal_RR",
+      "r": 0.1239,
+      "p": 0.1417
+    },
+    {
+      "feature": "rqa_mfcc1_DET",
+      "r": 0.1231,
+      "p": 0.1444
+    },
+    {
+      "feature": "rqa_mfcc1_TT",
+      "r": 0.1135,
+      "p": 0.1786
+    },
+    {
+      "feature": "rqa_jitterLocal_ENTR",
+      "r": 0.111,
+      "p": 0.1886
+    },
+    {
+      "feature": "rqa_mean_RR",
+      "r": 0.1098,
+      "p": 0.1931
+    },
+    {
+      "feature": "rqa_logRelF0-H1-H2_RR",
+      "r": 0.1072,
+      "p": 0.2041
+    },
+    {
+      "feature": "rqa_F0semitoneFrom27.5Hz_RR",
+      "r": 0.1068,
+      "p": 0.2058
+    }
+  ],
+  "rqa_sig_count": {
+    "n_features_tested": 74,
+    "n_significant_p05": 1,
+    "n_significant_bonferroni": 0
+  },
+  "auc_lift": {
+    "baseline_best_auc": 0.6303,
+    "rqa_only_best_auc": 0.5835,
+    "combined_best_auc": 0.6485,
+    "lift_combined_vs_baseline": 0.0182,
+    "lift_pct": 2.89
+  }
+}

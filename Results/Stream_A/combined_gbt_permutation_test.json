@@ -1,0 +1,15 @@
+{
+  "model": "GradientBoostedTrees",
+  "feature_set": "Combined_eGeMAPSv02_RQA",
+  "n_features": 524,
+  "n_subjects": 142,
+  "pooled_auc_roc": 0.7875,
+  "permutation_test": {
+    "n_permutations": 1000,
+    "true_auc": 0.7875,
+    "null_mean": 0.5008,
+    "null_std": 0.0583,
+    "p_value": 0.000999,
+    "significant_alpha_05": true
+  }
+}
